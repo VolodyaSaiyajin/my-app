@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import PageBanner from './Struct/banner';
+import ContentBar from './Struct/contentBar';
+import Header from './Struct/header';
+import MenuNavigation from './Struct/menu';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return <div className="app-wrapper">
+      <Header />
+      <MenuNavigation />
+      <PageBanner />
+      <ContentBar/>
     </div>
-  );
 }
 
 export default App;
