@@ -1,18 +1,21 @@
 // eslint-disable-next-line
 import React from "react";
-import logo from "./images/cat.jpg";
+import logo from "./images/svg/csgo.svg";
 
 const Header = () => {
     return (
     <header className="header">
-        <div className="header__logo">
-            <img src={logo} alt="#" />
-        </div>
-        <div className="header__navigation-bar">
-            <a className="header__item" href="#">Main</a>
-            <a className="header__item" href="#">About Us</a>
-            <a className="header__item" href="#">Forum</a>
-            <a className="header__item" href="#">Buy</a>
+        <div className="header__header-row">
+            <div className="header__logo">
+                <img src={logo} alt="#" />
+            </div>
+            <h1 className="header__title">Киберспортивная социальная сеть</h1>
+            <div className="header__navigation-bar">
+                <div className="header__item"><a className="header__adress" href="#">Главная</a></div>
+                <div className="header__item"><a className="header__adress" href="#">Форум</a></div>
+                <div className="header__item"><a className="header__adress" href="#">Маркет</a></div>
+                <div className="header__item"><a className="header__adress" href="#">О нас</a></div>
+            </div>
         </div>
     </header>
     );

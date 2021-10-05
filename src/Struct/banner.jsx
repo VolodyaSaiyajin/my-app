@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "./images/cat.jpg"
+import banner from "./images/nightSky.jpg"
 
 const PageBanner = () => {
     return (
