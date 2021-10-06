@@ -17,12 +17,6 @@ body {
 
     max-width: 1200px;
     margin: 0 auto;
-    // grid-template-areas: "header header header"
-    //                      "menu banner banner"
-    //                      "menu content content"
-    //                      "footer footer footer";
-
-
 }
 
 .header {
@@ -161,7 +155,7 @@ body {
 
     &__message {
         grid-area: message;
-        background-color: rgb(134, 134, 134);
+        background-color: rgb(194, 194, 194);
         padding: 5px;
         margin: 0px 5px 5px 0px;
         border-radius: 10px;
