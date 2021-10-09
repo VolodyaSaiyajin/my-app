@@ -15,17 +15,19 @@
     }
 
     &__nickname {
+        
         font-weight: bold;
         grid-area: nickname;
         display: inline-block;
-        max-width: 100px;
-        text-align: center;
-        padding: 5px 0px 0px 0px;
-        
+        text-align: left;
+        padding: 10px 0px 0px 0px;
     }
 
     &__nickname a {
         color: #fff;
+        background-color: rgb(116, 116, 116);
+        padding: 0px 5px;
+        border-radius: 5px;
     }
 
     &__message {
@@ -36,8 +38,19 @@
         border-radius: 10px;
     }
 
-    &__likes {
-        margin: 10px;
+    &__count {
+        display: inline;
+    }
+
+    &__likes{
+        text-align: center;
+        font-size: 20px;
+        user-select: none;
+        
+    }
+
+    &__count:hover {
+        color: red;
     }
 }
 

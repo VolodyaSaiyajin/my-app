@@ -1,0 +1,8 @@
+.posting {
+    grid-area: posting;
+    margin: 15px 0px 0px 0px;
+    &__addPosting {
+        padding: 10px 30px;
+        background-color: rgb(216, 216, 216);
+    }
+}

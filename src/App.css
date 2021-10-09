@@ -8,7 +8,7 @@ body {
 .app-wrapper {
   display: -ms-grid;
   display: grid;
-  grid-template: [start] "header header" 0.5fr [row2] [row2] "menu banner" [row3] [row3] "menu content" 1fr [row4] [row4] "footer footer" 0.5fr [row-end]/150px 1fr;
+  grid-template: [start] "header header" 0.5fr [row2] [row2] "menu banner" [row3] [row3] "menu posting" [row4] [row4] "menu content" [row-end]/150px 1fr;
   max-width: 1200px;
   margin: 0 auto;
 }

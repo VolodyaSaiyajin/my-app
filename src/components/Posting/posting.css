@@ -1,0 +1,10 @@
+.posting {
+  grid-area: posting;
+  margin: 15px 0px 0px 0px;
+}
+
+.posting__addPosting {
+  padding: 10px 30px;
+  background-color: #d8d8d8;
+}
+/*# sourceMappingURL=posting.css.map */
