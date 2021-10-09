@@ -1,4 +1,5 @@
 import React from "react";
+import style from './contentBanner.css';
 import banner from "../images/nightSky.jpg"
 
 const PageBanner = () => {

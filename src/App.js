@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Null from "./null.css";
 import PageBanner from './components/Banner/banner';
 import ContentBar from './components/ContentBar/contentBar';
 import Footer from './components/Footer/footer';

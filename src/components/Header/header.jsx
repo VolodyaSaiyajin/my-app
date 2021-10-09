@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import React from "react";
-import style from 'header.css';
+import style from './header.css';
 import logo from "../images/svg/csgo.svg";
 
 const Header = () => {

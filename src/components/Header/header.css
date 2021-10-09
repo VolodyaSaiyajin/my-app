@@ -1,4 +1,8 @@
 .header {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 5px;
   grid-area: header;
   margin-top: 10px;
@@ -61,35 +65,5 @@
   margin: auto 0;
   border: 2px solid black;
   padding: 20px;
-}
-
-.Navigation {
-  margin-top: 20px;
-  max-width: 120px;
-  padding: 5px 5px 0px 5px;
-  border-radius: 5px;
-  background-color: #616161;
-}
-
-.Navigation__item {
-  border-radius: 5px;
-  margin: 0px 0px 10px 0px;
-  padding: 10px;
-  background-color: #db1717;
-  text-align: center;
-  color: #fff;
-}
-
-.Navigation__adress {
-  color: #000;
-}
-
-.Navigation__item:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 0px 50px red;
-          box-shadow: 0px 0px 50px red;
-  color: #000;
 }
 /*# sourceMappingURL=header.css.map */

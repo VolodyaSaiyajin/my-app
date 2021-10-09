@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React from "react";
+import style from './footer.css';
 
 const Footer = () => {
     return (
