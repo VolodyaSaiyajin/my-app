@@ -1,0 +1,7 @@
+.footer {
+    grid-area: footer;
+
+    & p{
+        text-align: end;
+    }
+}

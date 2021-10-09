@@ -1,0 +1,37 @@
+.content-bar {
+  display: -ms-grid;
+  display: grid;
+  border-radius: 10px;
+  grid-area: content;
+  grid-template: [start] "avatar nickname" [row2] [row2] "avatar message" [row-end]/100px 1fr;
+  background-color: #616161;
+}
+
+.content-bar__avatar {
+  grid-area: avatar;
+  padding: 10px;
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.content-bar__nickname {
+  font-weight: bold;
+  grid-area: nickname;
+  display: inline-block;
+  max-width: 100px;
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+}
+
+.content-bar__nickname a {
+  color: #fff;
+}
+
+.content-bar__message {
+  grid-area: message;
+  background-color: #c2c2c2;
+  padding: 5px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=contentBar.css.map */

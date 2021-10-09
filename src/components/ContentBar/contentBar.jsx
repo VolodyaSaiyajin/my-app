@@ -1,5 +1,5 @@
 import React from "react";
-import catAva from "./images/catAva.jpg";
+import catAva from "../images/catAva.jpg";
 
 
 const ContentBar = () => {

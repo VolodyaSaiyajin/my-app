@@ -1,0 +1,8 @@
+.footer {
+  grid-area: footer;
+}
+
+.footer p {
+  text-align: end;
+}
+/*# sourceMappingURL=footer.css.map */

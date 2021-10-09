@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import PageBanner from './Struct/banner';
-import ContentBar from './Struct/contentBar';
-import Footer from './Struct/footer';
-import Header from './Struct/header';
-import MenuNavigation from './Struct/menu';
+import PageBanner from './components/Banner/banner';
+import ContentBar from './components/ContentBar/contentBar';
+import Footer from './components/Footer/footer';
+import Header from './components/Header/header';
+import MenuNavigation from './components/Menu/menu';
 
 function App() {
   return <div className="app-wrapper">
-      <Header />
+      <Header/>
       <MenuNavigation />
-      <PageBanner />
+      <PageBanner/>
       <ContentBar/>
       <Footer />
     </div>

@@ -1,0 +1,39 @@
+.content-bar {
+    display: grid;
+    border-radius: 10px;
+    grid-area: content;
+    grid-template: [start] "avatar nickname" [row2]
+    [row2] "avatar message" [row-end] / 100px 1fr;
+    background-color: rgb(97, 97, 97);
+
+    &__avatar {
+        grid-area: avatar;
+        padding: 10px;
+        max-width: 100px;
+        border-radius: 50%;
+    }
+
+    &__nickname {
+        font-weight: bold;
+        grid-area: nickname;
+        display: inline-block;
+        max-width: 100px;
+        text-align: center;
+        padding: 5px 0px 0px 0px;
+        
+    }
+
+    &__nickname a {
+        color: #fff;
+    }
+
+    
+
+    &__message {
+        grid-area: message;
+        background-color: rgb(194, 194, 194);
+        padding: 5px;
+        margin: 0px 5px 5px 0px;
+        border-radius: 10px;
+    }
+}
