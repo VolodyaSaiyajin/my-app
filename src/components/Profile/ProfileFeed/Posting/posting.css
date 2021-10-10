@@ -1,0 +1,22 @@
+.posting {
+  grid-area: posting;
+  margin: 15px 0px 0px 0px;
+}
+
+.posting__addPosting {
+  padding: 10px 30px;
+  background-color: #d8d8d8;
+}
+
+.posting__send {
+  background-color: #d8d8d8;
+  margin: 0px 0px 0px 10px;
+  padding: 10px 15px;
+}
+
+.posting__send:hover {
+  background-color: #b9b9b9;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+/*# sourceMappingURL=posting.css.map */

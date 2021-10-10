@@ -1,6 +1,6 @@
 import React from "react";
 import style from './contentBar.css';
-import catAva from "../images/catAva.jpg";
+import catAva from "./Images/catAva.jpg";
 
 
 const ContentBar = () => {
@@ -15,5 +15,6 @@ const ContentBar = () => {
         </div>
     );
 }
+
 
 export default ContentBar;

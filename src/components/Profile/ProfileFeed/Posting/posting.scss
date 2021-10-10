@@ -1,0 +1,18 @@
+.posting {
+    grid-area: posting;
+    margin: 15px 0px 0px 0px;
+    &__addPosting {
+        padding: 10px 30px;
+        background-color: rgb(216, 216, 216);
+    }
+    &__send {
+        background-color: rgb(216, 216, 216);;
+        margin: 0px 0px 0px 10px;
+        padding: 10px 15px;
+    }
+
+    &__send:hover{
+        background-color: rgb(185, 185, 185);
+        transition: 0.1s;
+    }
+}

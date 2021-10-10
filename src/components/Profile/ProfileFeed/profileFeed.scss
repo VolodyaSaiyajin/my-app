@@ -1,0 +1,21 @@
+.profileFeed {
+    grid-area: profileFeed;
+    display: grid;
+
+    grid-template:
+        [start] "banner" [row2]
+        [row2] "post" [row3]
+        [row3] "content"
+        [row-end] / 1fr;
+    &__Banner {
+        grid-area: banner;
+    }
+
+    &__Posting {
+        grid-area: post;
+    }
+
+    &__ContentBar {
+        grid-area: content;
+    }
+}

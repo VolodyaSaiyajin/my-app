@@ -1,13 +1,14 @@
 import style from "./menu.css";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const MenuNavigation = () => {
     
     return (
         
     <nav className="Navigation">
-        <a className="Navigation__adress" href="#">Профиль</a>
-        <a className="Navigation__adress" href="#">Сообщения</a>
+        <NavLink to="/Profile/" className="Navigation__adress">Профиль</NavLink>
+        <NavLink to="/Dialogs/" className="Navigation__adress">Сообщения</NavLink>
         <a className="Navigation__adress" href="#">Новости</a>
         <a className="Navigation__adress" href="#">Музыка</a>
         <a className="Navigation__adress" href="#">Настройки</a>

@@ -1,0 +1,19 @@
+.profileFeed {
+  grid-area: profileFeed;
+  display: -ms-grid;
+  display: grid;
+  grid-template: [start] "banner" [row2] [row2] "post" [row3] [row3] "content" [row-end]/1fr;
+}
+
+.profileFeed__Banner {
+  grid-area: banner;
+}
+
+.profileFeed__Posting {
+  grid-area: post;
+}
+
+.profileFeed__ContentBar {
+  grid-area: content;
+}
+/*# sourceMappingURL=profileFeed.css.map */
