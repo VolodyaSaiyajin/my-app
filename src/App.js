@@ -12,19 +12,23 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header />
-        <MenuNavigation />
-        <Route path="/profile" component={Profile}>
-          <Profile />
-        </Route>
-        <Route path="/Dialogs" component={Dialogs}>
-          <Dialogs/>
-        </Route>
-        {/* <Route path="/profile" component={Settings}>
-          <Settings />
-        </Route> */}
+        <div className="app-wrapper__container">
+          <div class="app-wrapper__app">
+            <Header />
+            <MenuNavigation />
+            <Route path="/profile" component={Profile}>
+              <Profile />
+            </Route>
+            <Route path="/Dialogs" component={Dialogs}>
+              <Dialogs />
+            </Route>
+            {/* <Route path="/profile" component={Settings}>
+              <Settings />
+            </Route> */}
+          </div>
+        </div>
+        <div class="app-wrapper__footer"><Footer /></div>
 
-        <Footer />
       </div>
     </BrowserRouter>
   )
