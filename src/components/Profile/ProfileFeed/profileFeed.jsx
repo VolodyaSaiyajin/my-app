@@ -12,6 +12,7 @@ const profileFeed = () => {
       </div>
       <div className="profileFeed__Posting">
         <Posting />
+        <Posting />
       </div>
       <div className="profileFeed__ContentBar">
         <ContentBar />
