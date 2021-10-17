@@ -1,0 +1,41 @@
+.dialogs {
+  &__item {
+      display: flex;
+  }
+
+  &__avatar {
+  }
+
+  &__avatar img {
+      object-fit: cover;
+      width: 100px;
+      height: 100px;
+      border-radius: 75%;
+  }
+
+  &__nickname {
+      margin: 0px 20px 0px 0px;
+      padding: 5px 0px;
+  }
+
+  &__nickname-item {
+      white-space: nowrap;
+      min-width: 100%;
+      color: #fff;
+  }
+
+  &__message {
+      padding: 15px 0px 0px 0px;
+      width: 100%;    
+  }
+
+  &__message-item {
+      overflow: hidden;
+      line-height: 16px;
+      border-radius: 5px;
+      width: 350px;
+      max-height: 37px;
+      padding: 3px 10px 5px 10px;
+      background-color: rgb(126, 126, 126);
+  }
+}

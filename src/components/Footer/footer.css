@@ -4,7 +4,7 @@
       -ms-user-select: none;
           user-select: none;
   height: 20px;
-  min-width: 100%;
+  width: 100%;
   background-color: #181818;
 }
 

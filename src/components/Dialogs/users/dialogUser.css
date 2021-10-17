@@ -1,0 +1,40 @@
+.dialogs__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dialogs__avatar img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 75%;
+}
+
+.dialogs__nickname {
+  margin: 0px 20px 0px 0px;
+  padding: 5px 0px;
+}
+
+.dialogs__nickname-item {
+  white-space: nowrap;
+  min-width: 100%;
+  color: #fff;
+}
+
+.dialogs__message {
+  padding: 15px 0px 0px 0px;
+  width: 100%;
+}
+
+.dialogs__message-item {
+  overflow: hidden;
+  line-height: 16px;
+  border-radius: 5px;
+  width: 350px;
+  max-height: 37px;
+  padding: 3px 10px 5px 10px;
+  background-color: #7e7e7e;
+}
+/*# sourceMappingURL=dialogUser.css.map */
