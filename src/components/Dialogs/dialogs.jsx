@@ -3,7 +3,7 @@ import DialogUser from './users/dialogUser'
 import style from './dialogs.css'
 
 
-const Dialogs = () => {
+const Dialogs = (props) => {
   return (
     <div className="dialogs">
       <DialogUser message="Привет брот" />

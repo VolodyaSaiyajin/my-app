@@ -3,14 +3,16 @@ import style from './contentBar.css';
 import catAva from "./Images/catAva.jpg";
 
 
-const ContentBar = () => {
+
+const ContentBar = (props) => {
+
     return (
         <div className="content-bar">
             <img className="content-bar__avatar" src={catAva} alt="" />
-            <p className="content-bar__nickname"><a href="#">Дядя Бодя</a></p>
-            <p className="content-bar__message">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Речью алфавит переулка наш это маленькая, домах использовало она за.</p>
+            <p className="content-bar__nickname"><a href="#">{props.name}</a></p>
+            <p className="content-bar__message">{props.message}</p>
             <div className="content-bar__likes">
-                <p className="content-bar__count">♡</p>
+                <p className="content-bar__count">♡ {props.likesCount}</p>
             </div>
         </div>
     );

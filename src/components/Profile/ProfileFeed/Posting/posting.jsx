@@ -2,6 +2,7 @@ import React from "react";
 import style from './posting.css';
 
 
+
 const Posting = () => {
     return (
     <div className="posting">

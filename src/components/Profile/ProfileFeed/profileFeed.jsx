@@ -4,7 +4,12 @@ import ContentBar from './ContentBar/contentBar'
 import Posting from './Posting/posting'
 import style from './profileFeed.css'
 
-const profileFeed = () => {
+const profileFeed = (props) => {
+
+  let postsElements = props.state.posts.map(elem => <ContentBar
+    name={elem.name}
+    message={elem.post}
+    likesCount={elem.likesCount} />);
   return (
     <div className="profileFeed">
       <div className="profileFeed__Banner">
@@ -14,7 +19,7 @@ const profileFeed = () => {
         <Posting />
       </div>
       <div className="profileFeed__ContentBar">
-        <ContentBar />
+        {postsElements}
       </div>
     </div>
   )
