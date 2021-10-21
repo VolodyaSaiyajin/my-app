@@ -4,7 +4,6 @@ import style from './posting.css';
 
 
 const Posting = (props) => {
-    debugger;
     let newPostElement = React.createRef();
 
     let addPost = () => {
