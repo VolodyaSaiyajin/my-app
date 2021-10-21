@@ -8,6 +8,8 @@ import MenuNavigation from './components/Menu/menu'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Dialogs from './components/Dialogs/dialogs'
 
+
+
 function App(props) {
 
   return (
@@ -17,20 +19,16 @@ function App(props) {
           <div class="app-wrapper__app">
             <Header />
             <MenuNavigation />
-            <Route path="/profile" render={ () => <Profile state={props.state.profilePage}/>}/>
-            <Route path="/Dialogs" render={ () => <Dialogs state={props.state.dialogsPage}/>}>
-              <Dialogs />
-            </Route>
-            {/* <Route path="/profile" component={Settings}>
-              <Settings />
-            </Route> */}
+            <Route path="/profile" render={() => <Profile stateProfile={props.state.profilePage} addPost={props.addPost}/>} />
+            <Route path="/dialogs" render={() => <Dialogs statePage={props.state.dialogsPage} />} />
           </div>
         </div>
-        <div class="app-wrapper__footer"><Footer /></div>
 
+        <div class="app-wrapper__footer"><Footer /></div>
       </div>
     </BrowserRouter>
   )
+
 }
 
 export default App

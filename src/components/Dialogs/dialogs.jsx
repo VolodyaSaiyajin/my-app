@@ -8,7 +8,7 @@ const Dialogs = (props) => {
     <div className="dialogs">
       <DialogUser message="Привет брот" />
     </div>
-    )
-    
+  )
+
 }
 export default Dialogs

@@ -7,7 +7,6 @@ let state = {
             { id: 3, name: "Владимир Тильт", post: "Я тебя убью", likesCont: "47" },
             { id: 4, name: "Владислав Харитонов", post: "Тишка привет", likesCont: "47" }
         ]
-
     },
 
     dialogsPage: {
@@ -26,6 +25,16 @@ let state = {
                 { id: 4, name: "Владислав Харитонов", message: "Тишка привет" }
             ],
     }
+}
+
+export let addPost = (postText) => {
+    let newPost = {
+        id: 5,
+        name: "Кинчь",
+        post: postText,
+        likesCont: "0"
+    }
+    state.profilePage.posts.push(newPost);
 }
 
 export default state;

@@ -3,12 +3,20 @@ import style from './posting.css';
 
 
 
-const Posting = () => {
+const Posting = (props) => {
+    debugger;
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    }
+
     return (
-    <div className="posting">
-        <input className="posting__addPosting" placeholder="Введите текст" type="text" />
-        <button className="posting__send">Отправить</button>
-    </div>
+        <div className="posting">
+            <input ref={newPostElement} className="posting__addPosting" placeholder="Введите текст" type="text" />
+            <button onClick={addPost} className="posting__send">Отправить</button>
+        </div>
     );
 }
 export default Posting;
