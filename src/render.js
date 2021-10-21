@@ -1,12 +1,12 @@
+import reportWebVitals from './reportWebVitals';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import state from './Redux/data';
+
 import {addPost} from './Redux/data';
 
-export let rerenderEntireTree = () => {
+export let rerenderEntireTree = (state) => {
 
   ReactDOM.render(
     <React.StrictMode>
