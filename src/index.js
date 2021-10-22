@@ -1,5 +1,5 @@
 import {rerenderEntireTree} from './render'
-import state from './Redux/data';
+import {store} from './Redux/data';
 
 
-rerenderEntireTree(state);
+rerenderEntireTree(store);

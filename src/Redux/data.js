@@ -1,5 +1,6 @@
 import { rerenderEntireTree } from '../render'
-let state = {
+
+export const store = {
     profilePage: {
         posts: [
             { id: 1, name: "Иван Гевельев", post: "Приветствую. Столкнулся с проблемой в необходимости оптимизации виртуалки, т.к. макОС работает с дикими тормозами и откровенно неисправно, много программ отображаются неверно. Но самое печальное - невозможность банально проверить свою программу в xCode путем запуска эмулятора. Причем пустой проект эмулятор спустя 5-10 минут таки загружает, но уже загруженный функциями, циклами, кнопками и прочим не хочет, программа вылетает. Периодически возникают ошибки, скрины их кидаю ниже. С подобными техническими причинами я не могу себя реализовать полноценно в свифте, поэтому прошу помощи.", likesCont: "47" },
@@ -8,7 +9,7 @@ let state = {
             { id: 3, name: "Владимир Тильт", post: "Я тебя убью", likesCont: "47" },
             { id: 4, name: "Владислав Харитонов", post: "Тишка привет", likesCont: "47" }
         ],
-        defaultValue: "Обычное значение"
+        defaultValue: ""
     },
 
     dialogsPage: {
@@ -29,23 +30,31 @@ let state = {
     }
 }
 
-export let addPost = (postText) => {
+
+
+let updateEntireTree = () => {
+    console.log("tree was updated");
+}
+export const addPost = (postText) => {
     let newPost = {
         id: 5,
         name: "Кинчь",
         post: postText,
         likesCont: "0"
     }
-    state.profilePage.posts.push(newPost);
-    
-    rerenderEntireTree(state);
+    store.profilePage.posts.push(newPost);
+    rerenderEntireTree(store);
+
+}
+
+
+
+export const updateNewPost = (newText) => {
+    store.profilePage.defaultValue = newText;
+    rerenderEntireTree(store);
     
 }
 
-export let updateNewPost = (newText) => {
-    state.profilePage.defaultValue = newText;
-    rerenderEntireTree(state);
-    
+export const subscribe = (observer) => {
+    updateEntireTree = observer;
 }
-
-export default state;
