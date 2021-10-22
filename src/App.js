@@ -19,7 +19,7 @@ function App(props) {
           <div class="app-wrapper__app">
             <Header />
             <MenuNavigation />
-            <Route path="/profile" render={() => <Profile stateProfile={props.state.profilePage} addPost={props.addPost}/>} />
+            <Route path="/profile" render={() => <Profile updateNewPost={props.updateNewPost} stateProfile={props.state.profilePage} addPost={props.addPost} />} />
             <Route path="/dialogs" render={() => <Dialogs statePage={props.state.dialogsPage} />} />
           </div>
         </div>

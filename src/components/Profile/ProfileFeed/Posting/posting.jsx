@@ -6,15 +6,23 @@ import style from './posting.css';
 const Posting = (props) => {
     let newPostElement = React.createRef();
 
+    
+
+    let onUpdatePost = () => {
+        console.log("текст изменён");
+        let text = newPostElement.current.value;
+        props.updateNewPost(text);
+    }
+
     let addPost = () => {
         let text = newPostElement.current.value;
         props.addPost(text);
-        newPostElement.current.value = " ";
+        props.updateNewPost('');
     }
 
     return (
         <div className="posting">
-            <input ref={newPostElement} className="posting__addPosting" placeholder="Введите текст" type="text" />
+            <input onChange={onUpdatePost} ref={newPostElement} className="posting__addPosting" placeholder="Введите текст" type="text" />
             <button onClick={addPost} className="posting__send">Отправить</button>
         </div>
     );

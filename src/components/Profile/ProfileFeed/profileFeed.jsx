@@ -16,7 +16,7 @@ const profileFeed = (props) => {
         <Banner />
       </div>
       <div className="profileFeed__Posting">
-        <Posting addPost={props.addPost}/>
+        <Posting updateNewPost={props.updateNewPost}  addPost={props.addPost} />
       </div>
       <div className="profileFeed__ContentBar">
         {postsElements}
