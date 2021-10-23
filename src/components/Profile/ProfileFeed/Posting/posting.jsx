@@ -4,8 +4,6 @@ import style from './posting.css';
 
 
 const Posting = (props) => {
-    
-
     let newPostElement = React.createRef();
     let onUpdatePost = () => {
         let text = newPostElement.current.value;
@@ -16,9 +14,7 @@ const Posting = (props) => {
 
     let addPost = () => {
         console.log(`Значение ${props.defaultValue}`);
-        let text = newPostElement.current.value;
-        props.addPost(text);
-        props.updateNewPost('');
+        props.addPost();
         
     }
 

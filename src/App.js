@@ -11,16 +11,17 @@ import Dialogs from './components/Dialogs/dialogs'
 
 
 function App(props) {
-
+  debugger;
   return (
+    
     <BrowserRouter>
       <div className="app-wrapper">
         <div className="app-wrapper__container">
           <div class="app-wrapper__app">
             <Header />
             <MenuNavigation />
-            <Route path="/profile" render={() => <Profile updateNewPost={props.updateNewPost} stateProfile={props.state.profilePage} addPost={props.addPost} />} />
-            <Route path="/dialogs" render={() => <Dialogs statePage={props.state.dialogsPage} />} />
+            <Route path="/profile" render={() => <Profile updateNewPost={props.updateNewPost} stateProfile={props.state.getProfilePage()} addPost={props.addPost} />} />
+            <Route path="/dialogs" render={() => <Dialogs statePage={props.state.getProfilePage()} />} />
           </div>
         </div>
 
