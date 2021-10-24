@@ -4,11 +4,16 @@ import style from './dialogs.css'
 
 
 const Dialogs = (props) => {
+  debugger
+  let dialogElements = props.dialogState.getDialogs().map(elem => <DialogUser
+    name={elem.name}
+    message={elem.message} />);
+
   return (
     <div className="dialogs">
-      <DialogUser message="Привет брот" />
+      {dialogElements}
     </div>
   )
 
 }
-export default Dialogs
+export default Dialogs;

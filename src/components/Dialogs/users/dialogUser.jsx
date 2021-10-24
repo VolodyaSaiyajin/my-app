@@ -10,7 +10,7 @@ const dialogUser = (props) => {
     <div className="dialogs__item">
       <div className="dialogs__user">
         <div className="dialogs__avatar"><img src={imageAvatar} alt="Аватар" /></div>
-        <div className="dialogs__nickname"><a href="" className="dialogs__nickname-item">Данила Котова</a></div>
+        <div className="dialogs__nickname"><a href="" className="dialogs__nickname-item">{props.name}</a></div>
       </div>
       <div className="dialogs__message">
         <p className="dialogs__message-item">{props.message}</p>

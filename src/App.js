@@ -20,8 +20,8 @@ function App(props) {
           <div class="app-wrapper__app">
             <Header />
             <MenuNavigation />
-            <Route path="/profile" render={() => <Profile updateNewPost={props.updateNewPost} stateProfile={props.state.getProfilePage()} addPost={props.addPost} />} />
-            <Route path="/dialogs" render={() => <Dialogs statePage={props.state.getProfilePage()} />} />
+            <Route path="/profile" render={() => <Profile updateNewPost={props.updateNewPost} profileState={props.state.getProfilePage()} addPost={props.addPost} />} />
+            <Route path="/dialogs" render={() => <Dialogs dialogState={props.state.getDialogPage()} />} />
           </div>
         </div>
 

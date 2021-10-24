@@ -22,17 +22,22 @@ let store = {
         },
 
         rerenderEntireTree() {
-            debugger;
+            
             console.log('дерево обновлено')
         },
 
         _dialogsPage: {
             _dialogs: [
-                { id: 1, name: "Данила Котова", age: "47" },
-                { id: 2, name: "Марина Кузко", age: "14" },
-                { id: 3, name: "Владимир Тильт", age: "47" },
-                { id: 4, name: "Владислав Харитонов", age: "47" }
+                { id: 1, name: "Данила Котова", message: "Привет брот" },
+                { id: 2, name: "Марина Кузко", message: "Ямарина" },
+                { id: 3, name: "Владимир Тильт", message: "Я тебя убью" },
+                { id: 4, name: "Владислав Харитонов", message: "Тишка привет" }
             ],
+
+            getDialogs() {
+                debugger;
+                return this._dialogs;
+            },
 
             _messages:
                 [
