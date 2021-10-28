@@ -1,41 +1,55 @@
 .dialogs {
-  &__item {
-      display: flex;
-  }
+    &__item {
+        display: flex;
+        background-color: rgb(87, 87, 87);
+        margin: 0px 0px 10px 0px;
+        padding: 4px 10px 4px 10px;
+        border-radius: 5px
+        
+    }
 
-  &__avatar {
-  }
+    &__item:hover {
+        background-color: rgb(105, 105, 105);
+    }
 
-  &__avatar img {
-      object-fit: cover;
-      width: 100px;
-      height: 100px;
-      border-radius: 75%;
-  }
 
-  &__nickname {
-      margin: 0px 20px 0px 0px;
-      padding: 5px 0px;
-  }
+    &__user {
+        width: 30%;
+    }
 
-  &__nickname-item {
-      white-space: nowrap;
-      min-width: 100%;
-      color: #fff;
-  }
+    &__avatar {
+    }
 
-  &__message {
-      padding: 15px 0px 0px 0px;
-      width: 100%;    
-  }
+    &__avatar img {
+        object-fit: cover;
+        width: 60px;
+        height: 60px;
+        border-radius: 75%;
+    }
 
-  &__message-item {
-      overflow: hidden;
-      line-height: 16px;
-      border-radius: 5px;
-      width: 350px;
-      max-height: 37px;
-      padding: 3px 10px 5px 10px;
-      background-color: rgb(126, 126, 126);
-  }
+    &__nickname {
+        margin: 0px 20px 0px 0px;
+        padding: 5px 0px;
+    }
+
+    &__nickname-item {
+        white-space: nowrap;
+        min-width: 100%;
+        color: #fff;
+    }
+
+    &__message {
+        width: 100%;
+        padding: 15px 0px 0px 0px;
+    }
+
+    &__message-item {
+        overflow: hidden;
+        line-height: 16px;
+        border-radius: 5px;
+        width: inherit;
+        max-height: 37px;
+        padding: 3px 10px 5px 10px;
+        background-color: rgb(126, 126, 126);
+    }
 }

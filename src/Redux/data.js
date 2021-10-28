@@ -22,7 +22,7 @@ let store = {
         },
 
         rerenderEntireTree() {
-            
+
             console.log('дерево обновлено')
         },
 
@@ -35,7 +35,6 @@ let store = {
             ],
 
             getDialogs() {
-                debugger;
                 return this._dialogs;
             },
 
@@ -44,8 +43,13 @@ let store = {
                     { id: 1, name: "Данила Котова", message: "Привет брот" },
                     { id: 2, name: "Марина Кузко", message: "Ямарина" },
                     { id: 3, name: "Владимир Тильт", message: "Я тебя убью" },
-                    { id: 4, name: "Владислав Харитонов", message: "Тишка привет" }
+                    { id: 4, name: "Владислав Харитонов", message: "Тишка привет" },
                 ],
+
+            getMessages() {
+                debugger;
+                return this._messages;
+            },
 
         },
 
@@ -86,6 +90,24 @@ let store = {
 
     subscribe(observer) {
         this.rerenderEntireTree = observer;
+    },
+
+    dispatch(action) {
+        if (action === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                name: "Кинчь",
+                post: store._state._profilePage._newPostText,
+                likesCont: "0"
+            }
+            store._state._profilePage._posts.push(newPost);
+            store._state._profilePage._newPostText = '';
+            store.rerenderEntireTree(this._state);
+        }
+        else if (action === 'UPDATE-NEW-POST') {
+            store._state._profilePage._newPostText = action.newText;
+            rerenderEntireTree();
+        }
     }
 }
 

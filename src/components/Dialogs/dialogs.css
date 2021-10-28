@@ -1,5 +1,26 @@
 .dialogs {
-  margin-top: 20px;
-  max-height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 98%;
+  margin: 20px 0px 20px 0px;
+}
+
+.dialogs__elements {
+  padding: 0px 0px 5px 0px;
+  width: 40%;
+}
+
+.dialogs__with-user {
+  padding: 5px 5px 10px 5px;
+  border-radius: 5px;
+  margin: 0px 0px 0px 20px;
+  background-color: #575757;
+  width: 60%;
+  height: inherit;
+}
+
+.dialogs__with-user-elements {
+  height: 95%;
 }
 /*# sourceMappingURL=dialogs.css.map */

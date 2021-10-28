@@ -16,6 +16,7 @@ const dialogUser = (props) => {
         <p className="dialogs__message-item">{props.message}</p>
       </div>
     </div>
+    
   )
 }
 export default dialogUser

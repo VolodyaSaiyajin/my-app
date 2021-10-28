@@ -1,0 +1,58 @@
+.dialogs-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dialogs-user__dialog-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dialogs-user__name {
+  white-space: nowrap;
+  padding: 3px;
+  margin: 0px 0px 10px 0px;
+  width: 25%;
+  color: #fff;
+}
+
+.dialogs-user__message {
+  padding: 3px;
+  border-radius: 5px;
+  margin: 0px 0px 5px 5px;
+  width: 75%;
+  background-color: #7e7e7e;
+}
+
+.dialogs-user__input-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dialogs-user__input-message-element {
+  resize: none;
+  border-radius: 5px;
+  height: 100%;
+  width: 70%;
+}
+
+.dialogs-user__send-message {
+  border-radius: 5px;
+  width: 20%;
+}
+
+.dialogs-user__send-message:hover {
+  background-color: #666666;
+  color: #fff;
+}
+/*# sourceMappingURL=dialogWithUser.css.map */

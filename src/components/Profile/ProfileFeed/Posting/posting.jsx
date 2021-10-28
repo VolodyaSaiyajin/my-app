@@ -9,13 +9,13 @@ const Posting = (props) => {
         let text = newPostElement.current.value;
         props.updateNewPost(text);
         // console.log(props.defaultValue);
-        
+
     }
 
     let addPost = () => {
         console.log(`Значение ${props.defaultValue}`);
         props.addPost();
-        
+
     }
 
     return (

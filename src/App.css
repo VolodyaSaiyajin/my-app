@@ -19,9 +19,10 @@ body {
 }
 
 .app-wrapper__app {
+  height: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: [start] "header header" 1fr [row2] [row2] "menu profileFeed" [row-end]/145px;
+  grid-template: [start] "header header" 0.2fr [row2] [row2] "menu profileFeed" [row-end]/145px;
 }
 
 .app-wrapper__container {

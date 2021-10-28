@@ -1,0 +1,50 @@
+.dialogs-user {
+    display: flex;
+    flex-direction: column;
+
+    &__dialog-with-user {
+    }
+
+    &__dialog-element {
+        display: flex;
+    }
+
+    &__name {
+        white-space: nowrap;
+        padding: 3px;
+        margin: 0px 0px 10px 0px;
+        width: 25%;
+        color: #fff;
+    }
+
+    &__message {
+        padding: 3px;
+        border-radius: 5px;
+        margin: 0px 0px 5px 5px;
+        width: 75%;
+        background-color: rgb(126, 126, 126);
+    }
+
+    &__input-message {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+
+    &__input-message-element {
+        resize: none;
+        border-radius: 5px;
+        height: 100%;
+        width: 70%;
+    }
+
+    &__send-message {
+        border-radius: 5px;
+        width: 20%;
+    }
+    &__send-message:hover {
+        background-color: rgb(102, 102, 102);
+        color: #fff;
+    }
+}

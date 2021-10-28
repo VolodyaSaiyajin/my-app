@@ -17,7 +17,7 @@ const profileFeed = (props) => {
         <Banner />
       </div>
       <div className="profileFeed__Posting">
-        <Posting defaultValue={props.profileState._newPostText} updateNewPost={props.updateNewPost}  addPost={props.addPost} />
+        <Posting defaultValue={props.profileState._newPostText} dispatch={props.dispatch} />
       </div>
       <div className="profileFeed__ContentBar">
         {postsElements}

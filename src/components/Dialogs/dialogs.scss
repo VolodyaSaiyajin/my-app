@@ -1,4 +1,25 @@
 .dialogs {
-    margin-top: 20px;
-    max-height: 120px;
+    display: flex;
+    height: 98%;
+    margin: 20px 0px 20px 0px;
+    &__elements {
+        padding: 0px 0px 5px 0px;
+        width: 40%;
+    }
+
+    &__with-user {
+        padding: 5px 5px 10px 5px;
+        border-radius: 5px;
+        margin: 0px 0px 0px 20px;
+        background-color: rgb(87, 87, 87);
+        width: 60%;
+        height: inherit;
+    }
+
+    &__with-user-elements {
+        height: 95%;
+    }
 }
+
+
+

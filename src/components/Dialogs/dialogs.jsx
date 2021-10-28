@@ -1,6 +1,7 @@
 import React from 'react'
 import DialogUser from './users/dialogUser'
 import style from './dialogs.css'
+import DialogToUser from './dialogWithUser/dialogWithUser'
 
 
 const Dialogs = (props) => {
@@ -9,9 +10,20 @@ const Dialogs = (props) => {
     name={elem.name}
     message={elem.message} />);
 
+  let dialogWithUserElements = props.dialogState.getMessages().map(elem => <DialogToUser
+    name={elem.name}
+    message={elem.message} />);
+
   return (
     <div className="dialogs">
-      {dialogElements}
+      <div className="dialogs__elements">{dialogElements}</div>
+      <div className="dialogs__with-user">
+        <div className="dialogs__with-user-elements">{dialogWithUserElements}</div>
+        <div className="dialogs-user__input-message">
+          <textarea type="text" className="dialogs-user__input-message-element" />
+          <button className="dialogs-user__send-message">Отправить</button>
+        </div>
+      </div>
     </div>
   )
 
