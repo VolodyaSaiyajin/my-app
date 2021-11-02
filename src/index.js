@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import store from './Redux/data';
-export let rerenderEntireTree = (state) => {
+
+
+export let rerenderEntireTree = () => {
     
   ReactDOM.render(
     <React.StrictMode>

@@ -4,17 +4,19 @@ import style from './posting.css';
 
 
 const Posting = (props) => {
+    
     let newPostElement = React.createRef();
     let onUpdatePost = () => {
         let text = newPostElement.current.value;
-        props.updateNewPost(text);
+        props.dispatch({ type: 'UPDATE-NEW-POST', newText: text });
         // console.log(props.defaultValue);
 
     }
 
     let addPost = () => {
+        
         console.log(`Значение ${props.defaultValue}`);
-        props.addPost();
+        props.dispatch({ type: 'ADD-POST' });
 
     }
 

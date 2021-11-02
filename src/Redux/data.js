@@ -1,9 +1,12 @@
 import { rerenderEntireTree } from '../index';
 
 
+
+
 let store = {
 
     _state: {
+
         _profilePage: {
             _posts: [
                 { id: 1, name: "Иван Гевельев", post: "Приветствую. Столкнулся с проблемой в необходимости оптимизации виртуалки, т.к. макОС работает с дикими тормозами и откровенно неисправно, много программ отображаются неверно. Но самое печальное - невозможность банально проверить свою программу в xCode путем запуска эмулятора. Причем пустой проект эмулятор спустя 5-10 минут таки загружает, но уже загруженный функциями, циклами, кнопками и прочим не хочет, программа вылетает. Периодически возникают ошибки, скрины их кидаю ниже. С подобными техническими причинами я не могу себя реализовать полноценно в свифте, поэтому прошу помощи.", likesCont: "47" },
@@ -22,8 +25,7 @@ let store = {
         },
 
         rerenderEntireTree() {
-
-            console.log('дерево обновлено')
+            return this;
         },
 
         _dialogsPage: {
@@ -45,9 +47,9 @@ let store = {
                     { id: 3, name: "Владимир Тильт", message: "Я тебя убью" },
                     { id: 4, name: "Владислав Харитонов", message: "Тишка привет" },
                 ],
+            _newMessageText: "",
 
             getMessages() {
-                debugger;
                 return this._messages;
             },
 
@@ -63,51 +65,55 @@ let store = {
 
     },
 
+    _callSubscriber() {
+        debugger;
+    },
+
     getState() {
         return this._state;
     },
 
-    rerenderEntireTree() {
-        console.log("tree was updated");
-    },
-
-    addPost() {
-        let newPost = {
-            id: 5,
-            name: "Кинчь",
-            post: store._state._profilePage._newPostText,
-            likesCont: "0"
-        }
-        store._state._profilePage._posts.push(newPost);
-        store._state._profilePage._newPostText = '';
-        store.rerenderEntireTree(this._state);
-    },
-    updateNewPost(newText) {
-        store._state._profilePage._newPostText = newText;
-        rerenderEntireTree();
-
-    },
-
     subscribe(observer) {
-        this.rerenderEntireTree = observer;
+        debugger;
+        this._callSubscriber = observer;
     },
 
     dispatch(action) {
-        if (action === 'ADD-POST') {
+        debugger;
+        if (action.type === 'ADD-POST') {
             let newPost = {
                 id: 5,
-                name: "Кинчь",
+                name: "Новый пользователь",
                 post: store._state._profilePage._newPostText,
                 likesCont: "0"
             }
             store._state._profilePage._posts.push(newPost);
             store._state._profilePage._newPostText = '';
-            store.rerenderEntireTree(this._state);
+            this._callSubscriber(this._state);
         }
-        else if (action === 'UPDATE-NEW-POST') {
+        else if (action.type === 'UPDATE-NEW-POST') {
+            debugger;
             store._state._profilePage._newPostText = action.newText;
-            rerenderEntireTree();
+            this._callSubscriber(this._state);
         }
+
+        else if (action.type === 'ADD-MESSAGE') {
+            let newMessage = {
+                id: 5,
+                name: "Новый пользователь",
+                message: store._state._dialogsPage._newMessageText,
+            }
+            store._state._dialogsPage._messages.push(newMessage);
+            store._state._dialogsPage._newMessageText = '';
+            this._callSubscriber(this._state);
+        }
+
+        else if (action.type === 'UPDATE-NEW-MESSAGE') {
+            debugger;
+            store._state._dialogsPage._newMessageText = action.newText;
+            this._callSubscriber(this._state);
+        }
+
     }
 }
 
