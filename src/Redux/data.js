@@ -1,4 +1,6 @@
 import { rerenderEntireTree } from '../index';
+import dialogReducer from './dialogReducer';
+import postingReducer from './postingRedecer';
 
 
 
@@ -84,42 +86,9 @@ let store = {
     },
 
     dispatch(action) {
-        debugger;
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 5,
-                name: "Новый пользователь",
-                post: store._state._profilePage._newPostText,
-                likesCont: "0"
-            }
-            store._state._profilePage._posts.push(newPost);
-            store._state._profilePage._newPostText = '';
-            this._callSubscriber(this._state);
-        }
-        else if (action.type === 'UPDATE-NEW-POST') {
-            debugger;
-            store._state._profilePage._newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
-
-        else if (action.type === 'ADD-MESSAGE') {
-            let newMessage = {
-                id: 5,
-                name: "Новый пользователь",
-                message: store._state._dialogsPage._newMessageText,
-            }
-            store._state._dialogsPage._messages.push(newMessage);
-            store._state._dialogsPage._newMessageText = "";
-            this._callSubscriber(this._state);
-        }
-
-        else if (action.type === 'UPDATE-NEW-MESSAGE') {
-            debugger;
-            store._state._dialogsPage._newMessageText = action.newText;
-
-            this._callSubscriber(this._state);
-        }
-
+        this._state._profilePage = postingReducer(this._state._profilePage, action);
+        this._state._dialogsPage = dialogReducer(this._state._dialogsPage, action);
+        this._callSubscriber(this._state);
     }
 }
 
