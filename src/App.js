@@ -11,7 +11,7 @@ import Dialogs from './components/Dialogs/dialogs'
 
 
 function App(props) {
-  debugger;
+  
   return (
     
     <BrowserRouter>

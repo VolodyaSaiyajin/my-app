@@ -37,7 +37,7 @@ const Dialogs = (props) => {
       <div className="dialogs__with-user">
         <div className="dialogs__with-user-elements">{dialogWithUserElements}</div>
         <div className="dialogs-user__input-message">
-          <textarea ref={newMessageElement} onChange={onUpdateMessage} placeholder="Введите сообщение" type="text" className="dialogs-user__input-message-element" />
+          <textarea value={props.dialogState.getMessageText()} ref={newMessageElement} onChange={onUpdateMessage} placeholder="Введите сообщение" type="text" className="dialogs-user__input-message-element" />
           <button onClick={addMessage} className="dialogs-user__send-message">Отправить</button>
         </div>
       </div>

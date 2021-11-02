@@ -48,6 +48,11 @@ let store = {
                     { id: 4, name: "Владислав Харитонов", message: "Тишка привет" },
                 ],
             _newMessageText: "",
+            
+            getMessageText() {
+                return this._newMessageText;
+            },
+            
 
             getMessages() {
                 return this._messages;
@@ -104,13 +109,14 @@ let store = {
                 message: store._state._dialogsPage._newMessageText,
             }
             store._state._dialogsPage._messages.push(newMessage);
-            store._state._dialogsPage._newMessageText = '';
+            store._state._dialogsPage._newMessageText = "";
             this._callSubscriber(this._state);
         }
 
         else if (action.type === 'UPDATE-NEW-MESSAGE') {
             debugger;
             store._state._dialogsPage._newMessageText = action.newText;
+
             this._callSubscriber(this._state);
         }
 

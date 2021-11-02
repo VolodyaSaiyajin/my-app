@@ -10,7 +10,7 @@ const Posting = (props) => {
         let text = newPostElement.current.value;
         props.dispatch({ type: 'UPDATE-NEW-POST', newText: text });
         // console.log(props.defaultValue);
-
+        debugger;
     }
 
     let addPost = () => {
