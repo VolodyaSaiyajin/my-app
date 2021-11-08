@@ -4,7 +4,7 @@ import catAva from "./Images/catAva.jpg";
 
 
 
-const ContentBar = (props) => {
+const ContentBarContainer = (props) => {
 
     return (
         <div className="content-bar">
@@ -19,4 +19,4 @@ const ContentBar = (props) => {
 }
 
 
-export default ContentBar;
+export default ContentBarContainer;

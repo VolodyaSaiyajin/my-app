@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Null from './null.css'
-import Profile from './components/Profile/ProfileFeed/profileFeed'
+import Profile from './components/Profile/ProfileFeed/profileFeedContainer'
 import Footer from './components/Footer/footer'
 import Header from './components/Header/header'
 import MenuNavigation from './components/Menu/menu'
@@ -11,18 +11,18 @@ import Dialogs from './components/Dialogs/dialogs'
 
 
 function App(props) {
-  
+  debugger;
   return (
     
     <BrowserRouter>
-    
+
       <div className="app-wrapper">
         <div className="app-wrapper__container">
           <div class="app-wrapper__app">
             <Header />
             <MenuNavigation />
-            <Route path="/profile" render={() => <Profile dispatch={props.dispatch} profileState={props.state.getProfilePage()}/>} />
-            <Route path="/dialogs" render={() => <Dialogs dispatch={props.dispatch} dialogState={props.state.getDialogPage()} />} />
+            <Route path="/profile" render={() => <Profile dispatch={props.dispatch} profileState={props.state.profilePage}/>} />
+            <Route path="/dialogs" render={() => <Dialogs dispatch={props.dispatch} dialogState={props.state.dialogsPage} />} />
           </div>
         </div>
 

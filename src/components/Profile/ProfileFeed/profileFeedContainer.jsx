@@ -1,11 +1,12 @@
 import React from 'react'
 import Banner from './Banner/banner'
-import ContentBar from './ContentBar/contentBar'
-import Posting from './Posting/posting'
+import ContentBarContainer from './ContentBar/contentBarContainer'
+import PostingContainer from './Posting/postingContainer'
 import style from './profileFeed.css'
 
-const profileFeed = (props) => {
-  let postsElements = props.profileState.getPosts().map(elem => <ContentBar
+const profileFeedContainer = (props) => {
+    debugger
+  let postsElements = props.profileState._profilePage.getPosts().map(elem => <ContentBarContainer
     name={elem.name}
     message={elem.post}
     likesCount={elem.likesCount} />);
@@ -17,7 +18,7 @@ const profileFeed = (props) => {
         <Banner />
       </div>
       <div className="profileFeed__Posting">
-        <Posting defaultValue={props.profileState._newPostText} dispatch={props.dispatch} />
+        <PostingContainer defaultValue={props.profileState._newPostText} dispatch={props.dispatch} />
       </div>
       <div className="profileFeed__ContentBar">
         {postsElements}
@@ -25,4 +26,4 @@ const profileFeed = (props) => {
     </div>
   )
 }
-export default profileFeed
+export default profileFeedContainer
