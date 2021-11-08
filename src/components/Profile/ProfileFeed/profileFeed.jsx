@@ -4,7 +4,7 @@ import ContentBarContainer from './ContentBar/contentBarContainer'
 import PostingContainer from './Posting/postingContainer'
 import style from './profileFeed.css'
 
-const profileFeedContainer = (props) => {
+const profileFeed = (props) => {
     debugger
   let postsElements = props.profileState._profilePage.getPosts().map(elem => <ContentBarContainer
     name={elem.name}
@@ -26,4 +26,4 @@ const profileFeedContainer = (props) => {
     </div>
   )
 }
-export default profileFeedContainer
+export default profileFeed

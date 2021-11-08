@@ -30,7 +30,6 @@ let initialState = {
 
 const postingReducer = (state = initialState, action) => {
     if (action.type === 'ADD-POST') {
-        debugger
         let newPost = {
             id: 5,
             name: "Новый пользователь",

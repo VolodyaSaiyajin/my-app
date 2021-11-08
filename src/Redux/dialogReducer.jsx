@@ -9,7 +9,7 @@ let initialState = {
         ],
 
         getDialogs() {
-            return this._dialogs;
+            return initialState._dialogsPage._dialogs;
         },
 
         _messages:  [
@@ -21,24 +21,24 @@ let initialState = {
         _newMessageText: "",
 
         getMessageText() {
-            return this._newMessageText;
+            return initialState.getDialogPage()._newMessageText;
         },
 
         getMessages() {
-            return this._messages;
+
+            return initialState.getDialogPage()._messages;
         },
 
     },
 
     getDialogPage() {
-        return this._dialogsPage;
+        return initialState._dialogsPage;
     }
 }
 
 const dialogReducer = (state = initialState, action) => {
-
+    debugger
     if (action.type === 'ADD-MESSAGE') {
-        debugger;
         let newMessage = {
             id: 5,
             name: "Новый пользователь",
@@ -50,7 +50,6 @@ const dialogReducer = (state = initialState, action) => {
     }
 
     else if (action.type === 'UPDATE-NEW-MESSAGE') {
-        debugger;
         state.getDialogPage()._newMessageText = action.newText;
     }
     return state;

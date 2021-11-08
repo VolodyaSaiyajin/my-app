@@ -13,15 +13,14 @@ const PostingContainer = (props) => {
     }
 
     let addPost = () => {
-        
+        debugger;
         console.log(`Значение ${props.defaultValue}`);
         props.dispatch({ type: 'ADD-POST' });
 
     }
 
     return (
-        <Posting/>
-
+        <Posting onUpdatePost={onUpdatePost} newPostElement={newPostElement} addPost={addPost} defaultValue={props.defaultValue}/>
     );
 }
 export default PostingContainer;
