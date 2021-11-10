@@ -8,7 +8,7 @@ debugger
             <div className="dialogs__with-user">
                 <div className="dialogs__with-user-elements">{props.dialogWithUserElements}</div>
                 <div className="dialogs-user__input-message">
-                    <textarea value={props.dialogState._dialogsPage.getMessageText()} ref={props.newMessageElement}
+                    <textarea value={props.getMessageTextFromStore} ref={props.newMessageElement}
                               onChange={props.onUpdateMessage} placeholder="Введите сообщение" type="text"
                               className="dialogs-user__input-message-element"/>
                     <button onClick={props.addMessage} className="dialogs-user__send-message">Отправить</button>

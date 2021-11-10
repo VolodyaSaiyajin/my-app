@@ -2,6 +2,7 @@ import React from 'react'
 import DialogUser from './users/dialogUser'
 import style from './dialogs.css'
 import DialogToUser from './dialogWithUser/dialogWithUser'
+import Dialogs from "./dialogs";
 
 
 const DialogsContainer = (props) => {
@@ -30,16 +31,7 @@ const DialogsContainer = (props) => {
   }
 
   return (
-    <div className="dialogs">
-      <div className="dialogs__elements">{dialogElements}</div>
-      <div className="dialogs__with-user">
-        <div className="dialogs__with-user-elements">{dialogWithUserElements}</div>
-        <div className="dialogs-user__input-message">
-          <textarea value={props.dialogState._dialogsPage.getMessageText()} ref={newMessageElement} onChange={onUpdateMessage} placeholder="Введите сообщение" type="text" className="dialogs-user__input-message-element" />
-          <button onClick={addMessage} className="dialogs-user__send-message">Отправить</button>
-        </div>
-      </div>
-    </div>
+    <Dialogs onUpdateMessage={onUpdateMessage} dialogElements={dialogElements} dialogWithUserElements={dialogWithUserElements} newMessageElement={newMessageElement} addMessage={addMessage} getMessageTextFromStore={props.dialogState._dialogsPage.getMessageText()}/>
   )
 
 }
