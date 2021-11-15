@@ -3,7 +3,7 @@ import style from './dialogWithUser.css'
 
 
 const DialogToUser = (props) => {
-
+debugger
   return (
     <div className="dialogs-user">
       <div className="dialogs-user__dialog-with-user">

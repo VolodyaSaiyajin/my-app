@@ -4,8 +4,8 @@ import imageAvatar from './images/donilaCotov.jpg'
 
 
 
-const dialogUser = (props) => {
-
+const DialogUser = (props) => {
+    debugger
   return (
     <div className="dialogs__item">
       <div className="dialogs__user">
@@ -19,4 +19,4 @@ const dialogUser = (props) => {
     
   )
 }
-export default dialogUser
+export default DialogUser

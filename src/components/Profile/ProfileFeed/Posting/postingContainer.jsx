@@ -1,26 +1,33 @@
 import React from "react";
 import style from './posting.css';
 import Posting from './posting';
+import {connect} from "react-redux";
+import {addPostActionToState, updateNewPostActionToState} from "../../../../Redux/postingReducer";
 
 
-const PostingContainer = (props) => {
-    
-    let newPostElement = React.createRef();
-    let onUpdatePost = () => {
-        let text = newPostElement.current.value;
-        props.dispatch({ type: 'UPDATE-NEW-POST', newText: text });
-        debugger;
+
+let mapStateToProps = (state) => {
+    debugger;
+    return {
+        newPostElement: state.profilePage._profileState._newPostText,
+        dialogElements: state.profilePage._profileState,
     }
-
-    let addPost = () => {
-        debugger;
-        console.log(`Значение ${props.defaultValue}`);
-        props.dispatch({ type: 'ADD-POST' });
-
-    }
-
-    return (
-        <Posting onUpdatePost={onUpdatePost} newPostElement={newPostElement} addPost={addPost} defaultValue={props.defaultValue}/>
-    );
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: (text) => {
+            dispatch(addPostActionToState(text));
+        },
+
+        onUpdatePost: (text) => {
+            dispatch(updateNewPostActionToState(text));
+        }
+
+    }
+
+}
+
+
+const PostingContainer = connect(mapStateToProps, mapDispatchToProps)(Posting);
 export default PostingContainer;

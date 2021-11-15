@@ -1,29 +1,31 @@
-import React from 'react'
-import Banner from './Banner/banner'
-import ContentBarContainer from './ContentBar/contentBarContainer'
-import PostingContainer from './Posting/postingContainer'
-import style from './profileFeed.css'
+import ContentBar from "./ContentBar/contentBar";
+import Banner from "./Banner/banner";
+import PostingContainer from "./Posting/postingContainer";
+import React from "react";
+import Dialogs from "../../Dialogs/dialogs";
 
-const profileFeed = (props) => {
+const ProfileFeed= (state) => {
     debugger
-  let postsElements = props.profileState._profilePage.getPosts().map(elem => <ContentBarContainer
-    name={elem.name}
-    message={elem.post}
-    likesCount={elem.likesCount} />);
+
+    let postsElements = state._posts.map(elem => <ContentBar
+        name={elem.name}
+        message={elem.post}
+        likesCount={elem.likesCount} />);
 
 
-  return (
-    <div className="profileFeed">
-      <div className="profileFeed__Banner">
-        <Banner />
-      </div>
-      <div className="profileFeed__Posting">
-        <PostingContainer defaultValue={props.profileState._newPostText} dispatch={props.dispatch} />
-      </div>
-      <div className="profileFeed__ContentBar">
-        {postsElements}
-      </div>
-    </div>
-  )
+    return (
+        <div className="profileFeed">
+            <div className="profileFeed__Banner">
+                <Banner />
+            </div>
+            <div className="profileFeed__Posting">
+                <PostingContainer/>
+            </div>
+            <div className="profileFeed__ContentBar">
+                {postsElements}
+            </div>
+        </div>
+    )
 }
-export default profileFeed
+
+export default ProfileFeed;
