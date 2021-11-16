@@ -9,19 +9,20 @@ import {addPostActionToState, updateNewPostActionToState} from "../../../../Redu
 let mapStateToProps = (state) => {
     debugger;
     return {
-        newPostElement: state.profilePage._profileState._newPostText,
-        dialogElements: state.profilePage._profileState,
+        _newPostText: state.profilePage._newPostText,
+        _posts: state.profilePage._posts,
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        addPost: (text) => {
-            dispatch(addPostActionToState(text));
+        addPost: () => {
+            dispatch(addPostActionToState());
         },
 
         onUpdatePost: (text) => {
-            dispatch(updateNewPostActionToState(text));
+            let action = dispatch(updateNewPostActionToState(text));
+            dispatch(action);
         }
 
     }

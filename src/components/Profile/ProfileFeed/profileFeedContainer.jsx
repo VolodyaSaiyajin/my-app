@@ -1,32 +1,14 @@
 import React from "react";
 import {connect} from "react-redux";
 import ProfileFeed from "./profileFeed";
-import {addMessageActionToState, updateNewMessageActionToState} from "../../../Redux/dialogReducer";
 
 
 let mapStateToProps = (state) => {
     return {
-        state: state,
-        _profileState: state.profilePage._profileState,
-        _posts: state.profilePage._profileState._posts,
-        _dialogs: state.profilePage._profileState._dialogs
+        _postsForMap: state.profilePage._posts,
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    debugger
-    return {
-        onUpdateMessage: () => {
-            dispatch(updateNewMessageActionToState())
-        },
-
-        addMessage: (text) => {
-            dispatch(addMessageActionToState(text))
-        }
-
-    }
-}
-
-const ProfileContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileFeed);
+const ProfileContainer = connect(mapStateToProps)(ProfileFeed);
 
 export default ProfileContainer;

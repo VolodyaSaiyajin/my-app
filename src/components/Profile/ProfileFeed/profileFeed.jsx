@@ -4,19 +4,20 @@ import PostingContainer from "./Posting/postingContainer";
 import React from "react";
 import Dialogs from "../../Dialogs/dialogs";
 
-const ProfileFeed= (state) => {
+const ProfileFeed = (state) => {
     debugger
 
-    let postsElements = state._posts.map(elem => <ContentBar
+    let postsElements = state._postsForMap.map(elem => <ContentBar
         name={elem.name}
-        message={elem.post}
-        likesCount={elem.likesCount} />);
+        message={elem.postMessage}
+        likesCount={elem.likesCount}
+        key={elem.id}/>);
 
 
     return (
         <div className="profileFeed">
             <div className="profileFeed__Banner">
-                <Banner />
+                <Banner/>
             </div>
             <div className="profileFeed__Posting">
                 <PostingContainer/>
