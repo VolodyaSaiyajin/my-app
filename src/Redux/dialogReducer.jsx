@@ -31,7 +31,7 @@ const dialogReducer = (state = initialState, action) => {
             debugger
             return {
                 ...state,
-                _messages: [...state._messages, newMessage],
+                _dialogs: [...state._messages, newMessage],
                 _newMessageText: ''
             };
 
