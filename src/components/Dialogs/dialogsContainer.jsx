@@ -10,21 +10,21 @@ debugger
 
 let mapStateToProps = (state) => {
     return {
-        state: state,
-        dialogElements: state.dialogsPage,
+        dialogsPage: state.dialogsPage,
         getMessageTextFromStore: state.dialogsPage._newMessageText,
-        dialogWithUserElements: state.dialogsPage._dialogs
+        dialogWithUserElements: state.dialogsPage._dialogs,
+        messageElements: state.dialogsPage._messages
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        onUpdateMessage: () => {
-            dispatch(updateNewMessageActionToState())
+        onUpdateMessage: (text) => {
+            dispatch(updateNewMessageActionToState(text))
         },
 
-        addMessage: (text) => {
-            dispatch(addMessageActionToState(text))
+        addMessage: () => {
+            dispatch(addMessageActionToState())
         }
 
     }

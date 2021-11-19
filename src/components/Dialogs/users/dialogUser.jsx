@@ -6,6 +6,7 @@ import imageAvatar from './images/donilaCotov.jpg'
 
 const DialogUser = (props) => {
     debugger
+    console.log("работает")
   return (
     <div className="dialogs__item">
       <div className="dialogs__user">
@@ -16,7 +17,8 @@ const DialogUser = (props) => {
         <p className="dialogs__message-item">{props.message}</p>
       </div>
     </div>
-    
+
   )
+
 }
 export default DialogUser

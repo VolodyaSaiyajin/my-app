@@ -9,10 +9,6 @@ let initialState = {
         {id: 4, name: "Владислав Харитонов", message: "Тишка привет"}
     ],
 
-    getDialogs() {
-        return this._dialogs;
-    },
-
     _messages: [
         {id: 1, name: "Данила Котова", message: "Привет брот"},
         {id: 2, name: "Марина Кузко", message: "Ямарина"},
@@ -21,16 +17,10 @@ let initialState = {
     ],
 
     _newMessageText: "",
-
-    getMessages() {
-
-        return this._messages;
-    }
 }
 
 const dialogReducer = (state = initialState, action) => {
     debugger
-
     switch (action.type) {
         case ADD_MESSAGE: {
             let newMessage = {

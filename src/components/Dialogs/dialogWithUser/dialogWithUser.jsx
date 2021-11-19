@@ -3,7 +3,8 @@ import style from './dialogWithUser.css'
 
 
 const DialogToUser = (props) => {
-debugger
+    debugger
+    console.log("работает")
   return (
     <div className="dialogs-user">
       <div className="dialogs-user__dialog-with-user">
@@ -17,4 +18,5 @@ debugger
   )
 
 }
+
 export default DialogToUser;

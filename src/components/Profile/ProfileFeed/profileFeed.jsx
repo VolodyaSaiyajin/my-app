@@ -2,11 +2,9 @@ import ContentBar from "./ContentBar/contentBar";
 import Banner from "./Banner/banner";
 import PostingContainer from "./Posting/postingContainer";
 import React from "react";
-import Dialogs from "../../Dialogs/dialogs";
 
 const ProfileFeed = (state) => {
-    debugger
-
+debugger
     let postsElements = state._postsForMap.map(elem => <ContentBar
         name={elem.name}
         message={elem.postMessage}

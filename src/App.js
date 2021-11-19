@@ -11,7 +11,7 @@ import ProfileContainer from "./components/Profile/ProfileFeed/profileFeedContai
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
 
 
-function App(props) {
+function App() {
     return (
         <div className="app-wrapper">
             <div className="app-wrapper__container">
