@@ -1,28 +1,55 @@
+
+.users {
+
+  margin: 20px 0px 0px 0px;
+
+  &__users-pages {
+    border-radius: 3px;
+    padding: 8px;
+    background-color: rgb(75, 75, 72);
+  }
+
+  &__users-count {
+    cursor: pointer;
+    padding: 0px 15px 0px 0px;
+  }
+
+  &__users-count--current {
+    cursor: pointer;
+    padding: 0px 15px 0px 0px;
+  }
+}
+
 .user-element {
 
-    &_search-users {
-    }
+  &_search-users {
+    margin: 20px 0px 20px 0px;
+  }
 }
+
 .search-users {
 
-    &__item {
-        margin: 20px 0px 20px 0px;
-    }
+  &__item {
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+    background-color: rgb(70, 70, 70);
+  }
 
-    &__item-row {
-        display: flex;
-    }
+  &__item-row {
+    display: flex;
+  }
 
-    &__avatar {
-        width: 100px;
-    }
+  &__avatar {
+    width: 100px;
+  }
 
-    &__nickname {
-        color: #fff;
-    }
+  &__nickname {
+    padding: 8px;
+    color: #fff;
+  }
 
-    &__subscribe {
-        margin: 10px 0px 0px 0px;
-    }
+  &__subscribe {
+    margin: 10px 0px 0px 0px;
+  }
 }
-

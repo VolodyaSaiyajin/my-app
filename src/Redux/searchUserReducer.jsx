@@ -1,9 +1,13 @@
 let SUBSCRIBE_TO_USER = "SUBSCRIBE_TO_USER";
 let UNSUBSCRIBE_TO_USER = "UNSUBSCRIBE_TO_USER"
 let SET_USERS = "SET_USERS"
+let SELECTED_USER_COUNT = "SELECTED_USER_COUNT"
 
 let initialState = {
-    _users: []
+    _users: [],
+    pageSize: 3,
+    totalUsersCount: 120,
+    _selectedUsersCount: 10,
 }
 debugger
 const searchUserReducer = (state = initialState, action) => {
@@ -38,8 +42,17 @@ const searchUserReducer = (state = initialState, action) => {
             debugger
             return {
                 ...state,
-                _users: [...state._users, ...action.users]
+                _users: action.users
             };
+        }
+
+        case SELECTED_USER_COUNT: {
+            debugger
+            return {
+                ...state,
+                _selectedUsersCount: action.selectedCount
+
+            }
         }
 
         default:
@@ -50,5 +63,6 @@ const searchUserReducer = (state = initialState, action) => {
 export const setUsersAction = (users) => ({type: SET_USERS, users});
 export const subscribeUser = (userId) => ({type: SUBSCRIBE_TO_USER, userId});
 export const unsubscribeUser = (userId) => ({type: UNSUBSCRIBE_TO_USER, userId});
+export const setSelectedUsers = (selectedCount) => ({type: SELECTED_USER_COUNT, selectedCount})
 export default searchUserReducer;
 

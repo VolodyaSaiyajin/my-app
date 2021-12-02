@@ -1,5 +1,41 @@
-.search-users__item {
+.users {
+  margin: 20px 0px 0px 0px;
+}
+
+.users__users-pages {
+  border-radius: 3px;
+  padding: 8px;
+  background-color: #4b4b48;
+}
+
+.users__users-count {
+  padding: 0px 15px 0px 0px;
+}
+
+.users__users-count--current {
+  cursor: pointer;
+  padding: 0px 15px 0px 0px;
+  background-color: #b9b9b9;
+}
+
+.user-element_search-users {
+  cursor: pointer;
   margin: 20px 0px 20px 0px;
+}
+
+.users__users-count:hover {
+  background-color: #b9b9b9;
+}
+
+.users__users-count--current:hover {
+  background-color: #b9b9b9;
+}
+
+.search-users__item {
+  padding: 10px;
+  width: 300px;
+  display: inline-block;
+  background-color: #464646;
 }
 
 .search-users__item-row {
@@ -13,10 +49,12 @@
 }
 
 .search-users__nickname {
+  padding: 8px;
   color: #fff;
 }
 
 .search-users__subscribe {
+  padding: 3px 5px 3px 5px;
   margin: 10px 0px 0px 0px;
 }
 /*# sourceMappingURL=SearchUser.css.map */
