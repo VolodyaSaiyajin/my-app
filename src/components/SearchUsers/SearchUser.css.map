@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOK,AAAD,mBAAO,CAAC;EACJ,MAAM,EAAE,iBAAiB;CAC5B;;AAEA,AAAD,uBAAW,CAAC;EACR,OAAO,EAAE,IAAI;CAChB;;AAEA,AAAD,qBAAS,CAAC;EACN,KAAK,EAAE,KAAK;CACf;;AAEA,AAAD,uBAAW,CAAC;EACR,KAAK,EAAE,IAAI;CACd;;AAEA,AAAD,wBAAY,CAAC;EACT,MAAM,EAAE,gBAAgB;CAC3B",
+    "sources": [
+        "SearchUser.scss"
+    ],
+    "names": [],
+    "file": "SearchUser.css"
+}

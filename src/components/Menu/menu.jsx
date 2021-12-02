@@ -12,6 +12,7 @@ const MenuNavigation = () => {
         <a className="Navigation__adress" href="#">Новости</a>
         <a className="Navigation__adress" href="#">Музыка</a>
         <a className="Navigation__adress" href="#">Настройки</a>
+        <NavLink to="/Search/" className="Navigation__adress">Поиск людей</NavLink>
     </nav>
     );
 }

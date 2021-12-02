@@ -9,7 +9,7 @@ import DialogUser from "./users/dialogUser";
 
 
 const Dialogs = (props) => {
-    debugger
+
 
     let onUpdateMessage = () => {
         debugger

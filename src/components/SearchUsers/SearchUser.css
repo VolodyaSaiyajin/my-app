@@ -1,0 +1,22 @@
+.search-users__item {
+  margin: 20px 0px 20px 0px;
+}
+
+.search-users__item-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-users__avatar {
+  width: 100px;
+}
+
+.search-users__nickname {
+  color: #fff;
+}
+
+.search-users__subscribe {
+  margin: 10px 0px 0px 0px;
+}
+/*# sourceMappingURL=SearchUser.css.map */

@@ -1,0 +1,28 @@
+.user-element {
+
+    &_search-users {
+    }
+}
+.search-users {
+
+    &__item {
+        margin: 20px 0px 20px 0px;
+    }
+
+    &__item-row {
+        display: flex;
+    }
+
+    &__avatar {
+        width: 100px;
+    }
+
+    &__nickname {
+        color: #fff;
+    }
+
+    &__subscribe {
+        margin: 10px 0px 0px 0px;
+    }
+}
+
