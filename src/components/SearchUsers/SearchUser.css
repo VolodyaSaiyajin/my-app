@@ -9,6 +9,7 @@
 }
 
 .users__users-count {
+  cursor: pointer;
   padding: 0px 15px 0px 0px;
 }
 
@@ -19,7 +20,7 @@
 }
 
 .user-element_search-users {
-  cursor: pointer;
+
   margin: 20px 0px 20px 0px;
 }
 

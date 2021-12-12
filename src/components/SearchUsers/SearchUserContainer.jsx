@@ -7,7 +7,6 @@ import {setUsersAction, subscribeUser, unsubscribeUser, setSelectedUsers} from "
 debugger
 
 let mapStateToProps = (state) => {
-    debugger
     return {
         usersPage: state.searchUserPage._users,
         pageSize: state.searchUserPage.pageSize,
@@ -17,26 +16,13 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    debugger
-    return {
-        onSubscribeUser: (userId) => {
-            dispatch(subscribeUser(userId));
 
-        },
-        onUnsubscribeUser: (userId) => {
-            dispatch(unsubscribeUser(userId));
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAction(users));
-        },
-        setCurrentUsersPage: (selectedCount) => {
-            dispatch(setSelectedUsers(selectedCount));
-        }
-    }
-}
+const SearchUserContainer = connect(mapStateToProps, {
+    onSubscribeUser: subscribeUser,
+    onUnsubscribeUser: unsubscribeUser,
+    setUsers: setUsersAction,
+    setCurrentUsersPage: setSelectedUsers
 
-
-const SearchUserContainer = connect(mapStateToProps, mapDispatchToProps)(SearchUser);
+})(SearchUser);
 
 export default SearchUserContainer;

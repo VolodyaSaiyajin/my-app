@@ -5,9 +5,9 @@ let SELECTED_USER_COUNT = "SELECTED_USER_COUNT"
 
 let initialState = {
     _users: [],
-    pageSize: 3,
-    totalUsersCount: 120,
-    _selectedUsersCount: 10,
+    pageSize: 15,
+    totalUsersCount: 500,
+    _selectedUsersCount: 1,
 }
 debugger
 const searchUserReducer = (state = initialState, action) => {

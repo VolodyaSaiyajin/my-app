@@ -5,7 +5,7 @@ import Footer from './components/Footer/footer'
 import Header from './components/Header/header'
 import MenuNavigation from './components/Menu/menu'
 import {Route} from 'react-router-dom'
-import ProfileContainer from "./components/Profile/ProfileFeed/profileFeedContainer";
+import ProfileFeedContainer from "./components/Profile/ProfileFeed/profileFeedContainer";
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import SearchUserContainer from "./components/SearchUsers/SearchUserContainer";
 
@@ -17,8 +17,8 @@ function App() {
                 <div className="app-wrapper__app">
                     <Header/>
                     <MenuNavigation/>
-                    <Route path="/profile"
-                           render={() => <ProfileContainer/>}/>
+                    <Route path="/profile/:userId"
+                           render={() => <ProfileFeedContainer/>}/>
                     <Route path="/dialogs"
                            render={() => <DialogsContainer/>}/>
                     <Route path="/search"

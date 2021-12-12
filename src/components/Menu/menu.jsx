@@ -7,7 +7,7 @@ const MenuNavigation = () => {
     return (
         
     <nav className="Navigation">
-        <NavLink to="/Profile/" className="Navigation__adress">Профиль</NavLink>
+        <NavLink to="/Profile/58" className="Navigation__adress">Профиль</NavLink>
         <NavLink to="/Dialogs/" className="Navigation__adress">Сообщения</NavLink>
         <a className="Navigation__adress" href="#">Новости</a>
         <a className="Navigation__adress" href="#">Музыка</a>

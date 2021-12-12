@@ -7,7 +7,6 @@ import {addPostActionToState, updateNewPostActionToState} from "../../../../Redu
 
 
 let mapStateToProps = (state) => {
-    debugger;
     return {
         _newPostText: state.profilePage._newPostText,
         _posts: state.profilePage._posts,

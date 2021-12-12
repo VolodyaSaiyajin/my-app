@@ -5,16 +5,13 @@ const Posting = (props) => {
     let newPostElement = React.createRef();
 
     let onUpdatePost = () => {
-        debugger
         let text = newPostElement.current.value;
         props.onUpdatePost(text)
     }
 
     let addPost = () => {
-        debugger
         props.addPost();
     }
-    debugger
     return (
 
         <div className="posting">

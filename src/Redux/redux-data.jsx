@@ -17,4 +17,6 @@ let store = createStore(reducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window._
     latency: 0
 }));
 
+window.store = store;
+
 export default store;

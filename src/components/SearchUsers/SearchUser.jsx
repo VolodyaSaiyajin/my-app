@@ -4,7 +4,6 @@ import style from "./SearchUser.css"
 import * as axios from "axios";
 
 let SearchUser = (props) => {
-    debugger
 
 
     let getUsers = () => {
