@@ -46,7 +46,6 @@ const postingReducer = (state = initialState, action) => {
             };
         }
         case SET_USER_PROFILE: {
-            debugger
             return {
                 ...state,
                 _profile: action.profile

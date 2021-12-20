@@ -9,16 +9,13 @@ import {withRouter} from "react-router-dom";
 class ProfileFeedContainer extends React.Component {
 
     componentDidMount() {
-        debugger
         let userId = this.props.match.params.userId
         axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
-                debugger
             this.props.setUserProfile(response.data);
         });
     }
 
     render() {
-        debugger
         return (
             <ProfileFeed onPageChanged={this.onPageChanged} {...this.props}/>
         )
@@ -39,5 +36,4 @@ let DataWithUrlContainerComponent = withRouter(ProfileFeedContainer)
 export default  connect(mapStateToProps, {
     setUserProfile,
     setUserId,
-
 })(DataWithUrlContainerComponent);

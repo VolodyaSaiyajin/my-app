@@ -3,7 +3,7 @@ import React from "react";
 import style from './header.css';
 import logo from "../images/svg/csgo.svg";
 
-const Header = () => {
+const Header = (props) => {
     return (
     <header className="header">
         <div className="header__header-row">
@@ -16,6 +16,7 @@ const Header = () => {
                 <div className="header__item"><a className="header__adress" href="#">Форум</a></div>
                 <div className="header__item"><a className="header__adress" href="#">Маркет</a></div>
                 <div className="header__item"><a className="header__adress" href="#">О нас</a></div>
+                <div className="header__item"><a className="header__adress" href="#">{props.isAuth ? props.nickname : <p>Авторизация</p>}</a></div>
             </div>
         </div>
     </header>

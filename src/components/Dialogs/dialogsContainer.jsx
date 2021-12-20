@@ -3,7 +3,6 @@ import style from './dialogs.css'
 import Dialogs from "./dialogs";
 import {addMessageActionToState, updateNewMessageActionToState} from "../../Redux/dialogReducer";
 import {connect} from "react-redux";
-debugger
 
 
 

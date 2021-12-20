@@ -3,7 +3,6 @@ import style from './contentBanner.css';
 import bannerImg from "./bannerImage/nightSky.jpg";
 
 const Banner = (props) => {
-    debugger
     if (!props.profile) {
        return <p>ПУСТО</p>
     }

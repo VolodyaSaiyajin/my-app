@@ -2,9 +2,13 @@ import React from "react";
 import style from "./SearchUser.css"
 import {connect} from "react-redux";
 import SearchUser from "./SearchUserC";
-import {setUsersAction, subscribeUser, unsubscribeUser, setSelectedUsers} from "../../Redux/searchUserReducer";
-
-debugger
+import {
+    setUsersAction,
+    subscribeUser,
+    unsubscribeUser,
+    setSelectedUsers,
+    setFetching
+} from "../../Redux/searchUserReducer";
 
 let mapStateToProps = (state) => {
     return {
@@ -18,6 +22,7 @@ let mapStateToProps = (state) => {
 
 
 const SearchUserContainer = connect(mapStateToProps, {
+    setFetching,
     onSubscribeUser: subscribeUser,
     onUnsubscribeUser: unsubscribeUser,
     setUsers: setUsersAction,

@@ -2,14 +2,15 @@ let SUBSCRIBE_TO_USER = "SUBSCRIBE_TO_USER";
 let UNSUBSCRIBE_TO_USER = "UNSUBSCRIBE_TO_USER"
 let SET_USERS = "SET_USERS"
 let SELECTED_USER_COUNT = "SELECTED_USER_COUNT"
+let SET_FETCHING = "SET_FETCHING"
 
 let initialState = {
     _users: [],
     pageSize: 15,
     totalUsersCount: 500,
     _selectedUsersCount: 1,
+    fetching: false,
 }
-debugger
 const searchUserReducer = (state = initialState, action) => {
     switch (action.type) {
         case SUBSCRIBE_TO_USER: {
@@ -39,7 +40,6 @@ const searchUserReducer = (state = initialState, action) => {
         }
 
         case SET_USERS: {
-            debugger
             return {
                 ...state,
                 _users: action.users
@@ -47,11 +47,16 @@ const searchUserReducer = (state = initialState, action) => {
         }
 
         case SELECTED_USER_COUNT: {
-            debugger
             return {
                 ...state,
                 _selectedUsersCount: action.selectedCount
 
+            }
+        }
+        case SET_FETCHING: {
+            return {
+                ...state,
+                fetching: action.setFetching
             }
         }
 
@@ -64,5 +69,7 @@ export const setUsersAction = (users) => ({type: SET_USERS, users});
 export const subscribeUser = (userId) => ({type: SUBSCRIBE_TO_USER, userId});
 export const unsubscribeUser = (userId) => ({type: UNSUBSCRIBE_TO_USER, userId});
 export const setSelectedUsers = (selectedCount) => ({type: SELECTED_USER_COUNT, selectedCount})
+export const setFetching = (setFetching) => ({type: SET_FETCHING, setFetching})
+
 export default searchUserReducer;
 

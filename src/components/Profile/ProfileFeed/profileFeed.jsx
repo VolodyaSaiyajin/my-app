@@ -4,7 +4,6 @@ import PostingContainer from "./Posting/postingContainer";
 import React from "react";
 
 const ProfileFeed = (state, props) => {
-debugger
     let postsElements = state._postsForMap.map(elem => <ContentBar
         name={elem.name}
         message={elem.postMessage}
