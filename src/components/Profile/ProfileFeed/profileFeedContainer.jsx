@@ -4,13 +4,16 @@ import ProfileFeed from "./profileFeed";
 import * as axios from "axios";
 import {setUserId, setUserProfile} from "../../../Redux/postingReducer";
 import {withRouter} from "react-router-dom";
+import {usersAPI} from "../../../Redux/api";
 
 
 class ProfileFeedContainer extends React.Component {
 
     componentDidMount() {
         let userId = this.props.match.params.userId
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
+
+            usersAPI.getProfile(userId)
+                .then(response => {
             this.props.setUserProfile(response.data);
         });
     }

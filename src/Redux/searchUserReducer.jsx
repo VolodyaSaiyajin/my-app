@@ -1,3 +1,5 @@
+import {usersAPI} from "./api";
+
 let SUBSCRIBE_TO_USER = "SUBSCRIBE_TO_USER";
 let UNSUBSCRIBE_TO_USER = "UNSUBSCRIBE_TO_USER"
 let SET_USERS = "SET_USERS"
@@ -70,6 +72,24 @@ export const subscribeUser = (userId) => ({type: SUBSCRIBE_TO_USER, userId});
 export const unsubscribeUser = (userId) => ({type: UNSUBSCRIBE_TO_USER, userId});
 export const setSelectedUsers = (selectedCount) => ({type: SELECTED_USER_COUNT, selectedCount})
 export const setFetching = (setFetching) => ({type: SET_FETCHING, setFetching})
+
+
+export const getUsersThunk = (currentPage, pageSize) => {
+
+    return dispatch => {
+
+        dispatch(setFetching(true))
+
+        usersAPI.getUsers(currentPage, pageSize).then(data => {
+                dispatch(setUsersAction(data.items))
+                dispatch(setFetching(false))
+            }
+        )
+    }
+
+
+
+}
 
 export default searchUserReducer;
 

@@ -9,6 +9,7 @@ import ProfileFeedContainer from "./components/Profile/ProfileFeed/profileFeedCo
 import DialogsContainer from "./components/Dialogs/dialogsContainer";
 import SearchUserContainer from "./components/SearchUsers/SearchUserContainer";
 import HeaderContainer from "./components/Header/headerContainer";
+import LoginContainer from "./components/Login/LoginContainer";
 
 
 function App() {
@@ -18,13 +19,18 @@ function App() {
                 <div className="app-wrapper__app">
                     <HeaderContainer/>
                     <MenuNavigation/>
-                    <Route path="/profile/:userId"
-                           render={() => <ProfileFeedContainer/>}/>
-                    <Route path="/dialogs"
-                           render={() => <DialogsContainer/>}/>
-                    <Route path="/search"
-                           render={() => <SearchUserContainer/>}/>
-                </div>
+                    <div className="app-wrapper__content">
+                        <Route path="/profile/:userId"
+                               render={() => <ProfileFeedContainer/>}/>
+                        <Route path="/dialogs"
+                               render={() => <DialogsContainer/>}/>
+                        <Route path="/search"
+                               render={() => <SearchUserContainer/>}/>
+                        <Route path="/login"
+                               render={() => <LoginContainer/>}/>
+                    </div>
+                    </div>
+
             </div>
             <div className="app-wrapper__footer"><Footer/></div>
         </div>

@@ -1,7 +1,7 @@
 
 .users {
 
-  margin: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 
   &__users-pages {
     border-radius: 3px;
@@ -14,9 +14,14 @@
     padding: 0px 15px 0px 0px;
   }
 
+  &__users-count:hover {
+    background-color: #b9b9b9;
+  }
+
   &__users-count--current {
     cursor: pointer;
     padding: 0px 15px 0px 0px;
+    background-color: #b9b9b9;
   }
 }
 
@@ -50,6 +55,12 @@
   }
 
   &__subscribe {
+    border-radius: 5px;
+    padding: 5px 10px;
     margin: 10px 0px 0px 0px;
+  }
+
+  &__subscribe:hover {
+    background-color: #e32828;
   }
 }

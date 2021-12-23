@@ -2,28 +2,21 @@ import React from "react";
 import avatarImage from "../Dialogs/users/images/donilaCotov.jpg"
 import * as axios from "axios";
 import Users from "./Users";
-import {getUsersFromAPI} from "../../Redux/api";
+import {usersAPI} from "../../Redux/api";
 import {setFetching} from "../../Redux/searchUserReducer";
 
 class SearchUser extends React.Component {
 
     componentDidMount() {
-        setFetching(true)
-        getUsersFromAPI(this.props.currentPage, this.props.pageSize).then(response => {
-                this.props.setUsers(response.data.items)
-            setFetching(false)
-            }
-        )
+        this.props.getUsersThunk()
     }
 
     onPageChanged = (pageN) => {
         this.props.setCurrentUsersPage(pageN)
         setFetching(true)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageN}&count=${this.props.pageSize}`, {
-            withCredentials: true
-        }).then(response => {
+        usersAPI.getUsers(pageN, this.props.pageSize).then(data => {
             setFetching(false)
-            this.props.setUsers(response.data.items)
+            this.props.setUsers(data.items)
         })
     }
 

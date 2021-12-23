@@ -1,18 +1,18 @@
 .users {
-  margin: 20px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
-
 .users__users-pages {
   border-radius: 3px;
   padding: 8px;
   background-color: #4b4b48;
 }
-
 .users__users-count {
   cursor: pointer;
   padding: 0px 15px 0px 0px;
 }
-
+.users__users-count:hover {
+  background-color: #b9b9b9;
+}
 .users__users-count--current {
   cursor: pointer;
   padding: 0px 15px 0px 0px;
@@ -20,16 +20,7 @@
 }
 
 .user-element_search-users {
-
   margin: 20px 0px 20px 0px;
-}
-
-.users__users-count:hover {
-  background-color: #b9b9b9;
-}
-
-.users__users-count--current:hover {
-  background-color: #b9b9b9;
 }
 
 .search-users__item {
@@ -38,24 +29,23 @@
   display: inline-block;
   background-color: #464646;
 }
-
 .search-users__item-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .search-users__avatar {
   width: 100px;
 }
-
 .search-users__nickname {
   padding: 8px;
   color: #fff;
 }
-
 .search-users__subscribe {
-  padding: 3px 5px 3px 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
   margin: 10px 0px 0px 0px;
 }
+.search-users__subscribe:hover {
+  background-color: #e32828;
+}
+
 /*# sourceMappingURL=SearchUser.css.map */

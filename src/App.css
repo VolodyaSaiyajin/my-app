@@ -6,49 +6,34 @@ body {
 }
 
 .app-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-width: 100%;
   max-width: 100%;
   height: 100%;
 }
-
 .app-wrapper__app {
   height: 100%;
-  display: -ms-grid;
   display: grid;
   grid-template: [start] "header header" 0.2fr [row2] [row2] "menu content" [row-end]/145px;
 }
-
 .app-wrapper__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   margin: 0 auto;
   width: 1200px;
   max-width: 100%;
 }
-
 .app-wrapper__block {
   height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
-
 .app-wrapper__footer {
   min-width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
+.app-wrapper__content {
+  margin: 10px 0px 0px 0px;
+}
+
 /*# sourceMappingURL=App.css.map */

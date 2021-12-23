@@ -1,9 +1,9 @@
-
 import dialogReducer from "./dialogReducer";
 import profileReducer from "./postingReducer";
 import searchUserReducer from './searchUserReducer'
-import {combineReducers, createStore} from "redux";
+import {combineReducers, createStore, applyMiddleware} from "redux";
 import authReducer from "./auth-reducer";
+import thunkMiddleware from "redux-thunk"
 
 
 let reducers = combineReducers({
@@ -13,9 +13,11 @@ let reducers = combineReducers({
     auth: authReducer,
 });
 
-let store = createStore(reducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
-    latency: 0
-}));
+let store = createStore(
+    reducers,
+    applyMiddleware(thunkMiddleware),
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 window.store = store;
 

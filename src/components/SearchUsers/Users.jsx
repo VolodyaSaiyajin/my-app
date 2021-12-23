@@ -4,6 +4,7 @@ import style from "./SearchUser.css"
 import {NavLink} from "react-router-dom";
 import UsersPhoto from "./SearchUserCPhoto";
 import * as axios from "axios";
+import {usersAPI} from "../../Redux/api";
 
 let Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -43,39 +44,32 @@ let Users = (props) => {
                                     </NavLink>
                                 </div>
                                 {
-                                    u.followed ? <button onClick={ () => {
-                                            axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
-                                                withCredentials: true,
-                                                headers: {
-                                                    "API-KEY": "e063c5c6-4a39-41e1-a215-e5e00f3c6eb8"
-                                                }
-                                            }).then(response => {
-                                                if (response.data.resultCode === 0) {
-                                                    props.onUnsubscribeUser(u.id);
-                                                    window.location.reload();
-                                                }
+                                    u.followed ? <button onClick={() => {
+                                            debugger
+                                            usersAPI.unfollowUser(u.id)
+                                                .then(data => {
+                                                    if (data.resultCode === 0) {
+                                                        props.onUnsubscribeUser(u.id);
+                                                        // window.location.reload();
+                                                    }
 
-                                            })
-
+                                                })
+                                            props.onPageChanged()
                                         }
-                                    }
-                                              className="search-users__subscribe">unsubscribe</button>
-                                    : <button onClick={ () => {
-                                        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
-                                                withCredentials: true,
-                                                headers: {
-                                                    "API-KEY": "e063c5c6-4a39-41e1-a215-e5e00f3c6eb8"
-                                                }
-                                            }).then(response => {
-                                                if (response.data.resultCode === 0) {
-                                                    props.onSubscribeUser(u.id);
-                                                    window.location.reload();
-                                                }
-
-                                            })
                                         }
-                                    }
-                                              className="search-users__subscribe">subcribe</button>}
+                                                         className="search-users__subscribe">unsubscribe</button>
+                                        : <button onClick={() => {
+                                            usersAPI.followUser(u.id)
+                                                .then(data => {
+                                                    if (data.resultCode === 0) {
+                                                        props.onSubscribeUser(u.id);
+                                                        // window.location.reload();
+                                                    }
+                                                })
+                                            props.onPageChanged()
+                                        }
+                                        }
+                                                  className="search-users__subscribe">subcribe</button>}
                             </div>
                         </div>
                     </div>

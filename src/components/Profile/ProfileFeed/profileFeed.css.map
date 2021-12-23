@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,SAAS,EAAE,WAAW;EACtB,OAAO,EAAE,IAAI;EAEb,aAAa,GACR,KAAK,EAAE,QAAQ,EAAE,IAAI,GACrB,IAAI,EAAE,MAAM,EAAE,IAAI,GAClB,IAAI,EAAE,SAAS,CAChB,aAAe;CAYtB;;AAXI,AAAD,oBAAS,CAAC;EACN,SAAS,EAAE,MAAM;CACpB;;AAEA,AAAD,qBAAU,CAAC;EACP,SAAS,EAAE,IAAI;CAClB;;AAEA,AAAD,wBAAa,CAAC;EACV,SAAS,EAAE,OAAO;CACrB",
-    "sources": [
-        "profileFeed.scss"
-    ],
-    "names": [],
-    "file": "profileFeed.css"
-}
+{"version":3,"sourceRoot":"","sources":["profileFeed.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EAEA,eACI;;AAIJ;EACI;;AAGJ;EACI;;AAGJ;EACI","file":"profileFeed.css"}

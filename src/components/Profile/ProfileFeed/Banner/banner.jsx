@@ -8,7 +8,7 @@ const Banner = (props) => {
     }
     return (
     <div className="banner">
-        <img className="banner__item" src={props.profile.photos.large} alt="" />
+        <img className="banner__item" src={props.profile.photos.large} alt="Аватарка" />
 
     </div>
     );

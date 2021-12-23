@@ -1,21 +1,14 @@
 .Navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
   max-width: 120px;
   padding: 5px 5px 0px 5px;
   border-radius: 5px;
-  margin: 20px 0px 100% 0px;
+  margin: 10px 0px 100% 0px;
   background-color: #616161;
   height: 200px;
 }
-
 .Navigation__adress {
   width: auto;
   text-align: center;
@@ -24,14 +17,12 @@
   background-color: #db1717;
   color: #fff;
 }
-
 .Navigation__adress:hover {
   color: white;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 50px red;
-          box-shadow: 0px 0px 50px red;
+  box-shadow: 0px 0px 50px red;
   color: black;
 }
+
 /*# sourceMappingURL=menu.css.map */

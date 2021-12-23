@@ -7,7 +7,8 @@ import {
     subscribeUser,
     unsubscribeUser,
     setSelectedUsers,
-    setFetching
+    setFetching,
+    getUsersThunk
 } from "../../Redux/searchUserReducer";
 
 let mapStateToProps = (state) => {
@@ -26,7 +27,8 @@ const SearchUserContainer = connect(mapStateToProps, {
     onSubscribeUser: subscribeUser,
     onUnsubscribeUser: unsubscribeUser,
     setUsers: setUsersAction,
-    setCurrentUsersPage: setSelectedUsers
+    setCurrentUsersPage: setSelectedUsers,
+    getUsersThunk
 
 })(SearchUser);
 

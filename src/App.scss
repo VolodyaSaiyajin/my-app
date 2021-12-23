@@ -12,7 +12,6 @@ body {
     min-width: 100%;
     max-width: 100%;
     height: 100%;
-    
     &__app {
         height: 100%;
         display: grid;
@@ -37,5 +36,8 @@ body {
         min-width: 100%;
         flex-direction: column;
         align-items: flex-end;
+    }
+    &__content {
+        margin: 10px 0px 0px 0px;
     }
 }

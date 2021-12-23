@@ -1,19 +1,17 @@
-.profileFeed {
-  grid-area: profileFeed;
-  display: -ms-grid;
-  display: grid;
-  grid-template: [start] "banner" [row2] [row2] "post" [row3] [row3] "content" [row-end]/1fr;
-}
+/* Error: expected "{".
+ *    ,
+ * 22 | search-users__subscribe
+ *    |                        ^
+ *    '
+ *   profileFeed.scss 22:24  root stylesheet */
 
-.profileFeed__Banner {
-  grid-area: banner;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 22 \2502  search-users__subscribe\a    \2502                         ^\a    \2575 \a   profileFeed.scss 22:24  root stylesheet';
 }
-
-.profileFeed__Posting {
-  grid-area: post;
-}
-
-.profileFeed__ContentBar {
-  grid-area: content;
-}
-/*# sourceMappingURL=profileFeed.css.map */
