@@ -33,7 +33,8 @@ body {
   align-items: flex-end;
 }
 .app-wrapper__content {
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0px 10px 0px;
+  min-height: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -18,21 +18,20 @@ export const usersAPI = {
     },
 
     unfollowUser(userId) {
-        debugger
         return instance.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
     },
 
     followUser(userId) {
-        debugger
         return instance.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`, {},)
     },
 
     authMe() {
+        return instance.get(`https://social-network.samuraijs.com/api/1.0/auth/me`)
 
     },
 
     getProfile(userId) {
-        return axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
+        return instance.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`)
     },
 
 }

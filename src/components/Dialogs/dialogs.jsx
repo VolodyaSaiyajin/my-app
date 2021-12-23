@@ -5,12 +5,7 @@ import DialogUser from "./users/dialogUser";
 
 
 
-
-
-
 const Dialogs = (props) => {
-
-
     let onUpdateMessage = () => {
         debugger
         let text = newMessageElement.current.value;

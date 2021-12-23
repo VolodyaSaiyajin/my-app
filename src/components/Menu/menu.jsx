@@ -2,17 +2,20 @@ import style from "./menu.css";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const MenuNavigation = () => {
-    
+const MenuNavigation = (props) => {
+
     return (
-        
     <nav className="Navigation">
-        <NavLink to="/Profile/5" className="Navigation__adress">Профиль</NavLink>
-        <NavLink to="/Dialogs/" className="Navigation__adress">Сообщения</NavLink>
-        <a className="Navigation__adress" href="#">Новости</a>
-        <a className="Navigation__adress" href="#">Музыка</a>
-        <a className="Navigation__adress" href="#">Настройки</a>
-        <NavLink to="/Search/" className="Navigation__adress">Поиск людей</NavLink>
+        <div className="Navigation__row">
+            <div className="Navigation__block"><NavLink to={`/Profile/${props.userId}`} className="Navigation__adress">{props.isAuth
+                ? props.nickname
+            : "Профиль"}</NavLink></div>
+            <div className="Navigation__block"> <NavLink to="/Dialogs/" className="Navigation__adress">Сообщения</NavLink></div>
+            <div className="Navigation__block"><a className="Navigation__adress" href="#">Новости</a></div>
+            <div className="Navigation__block"><a className="Navigation__adress" href="#">Музыка</a></div>
+            <div className="Navigation__block"><a className="Navigation__adress" href="#">Настройки</a></div>
+            <div className="Navigation__block"><NavLink to="/Search/" className="Navigation__adress">Поиск людей</NavLink></div>
+        </div>
     </nav>
     );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
 import ProfileFeed from "./profileFeed";
-import * as axios from "axios";
 import {setUserId, setUserProfile} from "../../../Redux/postingReducer";
 import {withRouter} from "react-router-dom";
 import {usersAPI} from "../../../Redux/api";
@@ -19,6 +18,7 @@ class ProfileFeedContainer extends React.Component {
     }
 
     render() {
+        debugger
         return (
             <ProfileFeed onPageChanged={this.onPageChanged} {...this.props}/>
         )
