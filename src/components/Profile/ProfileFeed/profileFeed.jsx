@@ -4,6 +4,7 @@ import PostingContainer from "./Posting/postingContainer";
 import React from "react";
 
 const ProfileFeed = (state, props) => {
+    debugger
     let postsElements = state._postsForMap.map(elem => <ContentBar
         name={elem.name}
         message={elem.postMessage}
@@ -11,11 +12,12 @@ const ProfileFeed = (state, props) => {
         key={elem.id}
         userId={elem.id}/>);
 
-
+    debugger
     return (
+
         <div className="profileFeed">
             <div className="profileFeed__Banner">
-                <Banner profile={state.profile}/>
+                <Banner profile={props.profile}/>
             </div>
             <div className="profileFeed__Posting">
                 <PostingContainer/>
@@ -26,5 +28,5 @@ const ProfileFeed = (state, props) => {
         </div>
     )
 }
-
+debugger
 export default ProfileFeed;
